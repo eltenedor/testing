@@ -33,12 +33,11 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo test, and deploy your project.
-          
-    perl:
-      container: perl:5.20
-      steps:
-        - uses: actions/checkout@v2
-        - name: run a simple perl script
-          run:
-            perl hello.pl
+          echo test, and deploy your project.    
+  perl:
+    runs-on: ubuntu-latest
+    container: perl:5.20
+    steps:
+      - uses: actions/checkout@v2
+      - name: run a simple perl script
+        run: perl hello.pl
