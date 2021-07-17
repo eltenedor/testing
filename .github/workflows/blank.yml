@@ -34,3 +34,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+    perl:
+      container: perl:5.20
+      steps:
+        - uses: actions/checkout@v2
+        - name: run a simple perl script
+          run:
+            perl hello.pl
